@@ -1,0 +1,50 @@
+/* (1)フォントの種類：「"Arial", "Meiryo", sans-serif」にします */
+body {
+  font-family: "Arial", "Meiryo", sans-serif;
+}
+
+/* (2)フォントサイズ：20pxにします */
+html {
+    font-size: 20px;
+}
+
+/* (3)フォントカラー：
+・「M、生年月日、趣味、プログラミングを始めた理由」を「skyblue」
+・「P、名前、血液型、好きな食べ物」を「rgb(255, 192, 203)」にします */
+.blue {
+    color: skyblue;
+}
+
+.pink {
+    color: rgb(255, 192, 203);
+}
+
+/* (4)h1の装飾：
+・フォント種類：「Josefin Sans」
+・フォントサイズ：ルート要素の2倍
+・総称フォント：「sans-serif」
+・文字間：1.2倍
+・影の大きさ・色：自由
+・実線：3px、カラー：rgb(115, 115, 114) */
+h1 {
+     font-family: "Josefin Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: <weight>;
+     font-style: normal;
+     font-size: 2rem;
+     letter-spacing: 1.2em;
+     text-shadow: 2px 2px 1px yellowgreen;
+     border-bottom: solid 3px rgb(115, 115, 114);
+}
+
+/* (5)その他の装飾：
+・テキスト：全て中央寄せ
+・「名前」～「血液型」までの要素をid属性basicのdivタグで囲う
+・子孫要素を利用して「侍太郎」、「1990年1月1日」、「O型」を太字 */
+html {
+    text-align: center;
+}
+
+#basic p {
+    font-weight: bold;
+}
