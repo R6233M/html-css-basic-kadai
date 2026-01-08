@@ -1,4 +1,4 @@
-/* (1)フォントの種類：「"Arial", "Meiryo", sans-serif」にします */
+/* (1)bodyのフォントの種類：「"Arial", "Meiryo", sans-serif」にします */
 body {
   font-family: "Arial", "Meiryo", sans-serif;
 }
@@ -28,8 +28,6 @@ html {
 ・実線：3px、カラー：rgb(115, 115, 114) */
 h1 {
      font-family: "Josefin Sans", sans-serif;
-     font-optical-sizing: auto;
-     font-weight: <weight>;
      font-style: normal;
      font-size: 2rem;
      letter-spacing: 1.2em;
@@ -41,7 +39,7 @@ h1 {
 ・テキスト：全て中央寄せ
 ・「名前」～「血液型」までの要素をid属性basicのdivタグで囲う
 ・子孫要素を利用して「侍太郎」、「1990年1月1日」、「O型」を太字 */
-html {
+body {
     text-align: center;
 }
 
