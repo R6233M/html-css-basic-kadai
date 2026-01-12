@@ -1,0 +1,148 @@
+/* 
+＊注意：
+・id→#〇〇
+・class→. △△
+・複数の指定「,」→　p, #〇〇, .△△ {} 
+*/
+
+/* 
+・h1、p、body要素の上下左右の余白（margin）：0
+・p要素とa要素のフォントサイズ：20px 
+*/
+h1, p, body {
+    margin: 0;
+}
+p, a {
+    font-size: 20px;
+}
+
+/* header要素内のスタイル
+・下の余白：20px
+・背景色：rgb(244, 79, 79)
+・中の要素：中央揃え
+*/
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+/* h1要素内のスタイル
+・文字色：rgb(255, 255, 255)
+*/
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+/* main要素全体
+・main要素全体の上下左右の余白：10px
+*/
+main {
+    margin: 10px;
+}
+
+/* id名：parentの要素
+・id名parentの要素をFlexコンテナ（displayプロパティ）
+・Flexboxコンテナの子要素（Flexアイテム）
+「一番左と一番右のアイテムも含め、均等な間隔で配置する」（justify-contentプロパティ）
+*/
+#parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* class名contentsの要素
+・囲う：太さ3px、実線、色 rgb(238, 204, 204)
+・幅：親要素の25%（flex-basis）
+・要素内の余白：上下10px、左右15px
+・要素外の余白：上下20px、左右0
+・中の要素：中央揃え
+*/
+.contents {
+    border: solid 3px rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px;
+    margin: 20px 0;
+    text-align: center
+}
+
+/* h2要素のスタイル
+・フォントサイズ：25px
+・下線：太さ3px、点線、色 rgb(236, 122, 122)
+・h2要素の前に「●」記号、色 rgb(239, 111, 139)
+*/
+h2 {
+    font-size: 25px;
+    border-bottom: dotted 3px rgb(236, 122, 122);
+}
+h2::before {
+    content: "●";
+    color: rgb(239, 111, 139);
+}
+
+/* 
+class名contentsの要素
+・二番目のp要素内のテキストの中で一番目の文字に以下を適応
+「二番目のp要素内のテキストの中で」 → :nth-of-type(2)
+「一番目の文字に」 → ::first-letter
+(1)太字
+(2)文字色：rgb(97, 206, 249)
+*/
+.contents p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+/* 
+class名contents内のimg要素
+・margin：上下10px、左右0
+・幅は70%
+*/
+img {
+    margin: 10px 0;
+    width: 70%;
+}
+
+/*
+footer要素内のスタイル
+・背景色：rgb(244, 79, 79)
+・中身の要素：中央揃え
+*/
+footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+/*
+a要素のスタイル
+・文字色：rgb(255, 255, 255)
+・文字色：rgb(193, 234, 251)　→　訪問済みリンク
+・文字色：rgb(245, 178, 168)　→　マウスカーソルが乗る
+*/
+a {
+    color: rgb(255, 255, 255);
+}
+a:visited {
+    color: rgb(193, 234, 251);
+}
+a:hover {
+    color: rgb(245, 178, 168);
+}
+
+/*
+画面幅768px以下のスタイル
+・h2フォントサイズ：30px
+・pフォントサイズ：25px
+・Flexboxコンテナ（id名：parent）内の要素：縦に並ぶ
+*/
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 25px;
+    }
+    #parent {
+        display: block;
+    }
+}
